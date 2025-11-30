@@ -4,7 +4,7 @@ reproducible procedure
 1. get https://github.com/begoon/yaze
    git clone https://github.com/begoon/yaze
 2. edit Makefile
-'''
+```
    [cobweb@yaze]$diff Makefile Makefile.org
    27,28c27
    < #OPTIONS            = -DBIOS -D_BSD_SOURCE
@@ -20,7 +20,7 @@ reproducible procedure
    ---
    > #YAZE_OBJS    = yaze.o simz80.o io.o
    [cobweb@yaze]$
-'''
+```
 4. make
 5. https://www.moria.de/~michael/cpmtools/
    I have installed them, so passed this.

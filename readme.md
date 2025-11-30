@@ -1,9 +1,9 @@
 Hey this repos is re-experiment for great work of https://github.com/cobwebkanamachi/yaze-cpm3 .
 
-reproducible procedure
-1. get https://github.com/begoon/yaze
-   git clone https://github.com/begoon/yaze
-2. edit Makefile
+reproducible procedure<BR>
+1. get https://github.com/begoon/yaze<BR>
+   git clone https://github.com/begoon/yaze<BR>
+2. edit Makefile<BR>
 ```
    [cobweb@yaze]$diff Makefile Makefile.org
    27,28c27
@@ -21,22 +21,22 @@ reproducible procedure
    > #YAZE_OBJS    = yaze.o simz80.o io.o
    [cobweb@yaze]$
 ```
-4. make
-5. https://www.moria.de/~michael/cpmtools/
-   I have installed them, so passed this.
-6. get https://www.moria.de/~michael/yaze-cpm3/yaze-cpm3.zip
-   unzip
-7. edit do.sh (new) edit content bellow two lines
-   mkfs.cpm -b bootload.com -b cpmldr.com cpm-3
-   cpmcp cpm-3 cpm3.sys ccp.com halt.com 0:
-8. bash do.sh
-   after execution, you have cpm-3 file (diskimage)
-9. edit start (new)
-   mount a cpm-3
-   attach rdr /dev/null
-   attach lst lst
-   attach pun /dev/null
-10. Exec cpm3
+4. make<BR>
+5. https://www.moria.de/~michael/cpmtools/<BR>
+   I have installed them, so passed this.<BR>
+6. get https://www.moria.de/~michael/yaze-cpm3/yaze-cpm3.zip<BR>
+   unzip<BR>
+7. edit do.sh (new) edit content bellow two lines<BR>
+   mkfs.cpm -b bootload.com -b cpmldr.com cpm-3<BR>
+   cpmcp cpm-3 cpm3.sys ccp.com halt.com 0:<BR>
+8. bash do.sh<BR>
+   after execution, you have cpm-3 file (diskimage)<BR>
+9. edit start (new)<BR>
+   mount a cpm-3<BR>
+   attach rdr /dev/null<BR>
+   attach lst lst<BR>
+   attach pun /dev/null<BR>
+10. Exec cpm3<BR>
 <PRE>
    cd yaze-cpm3
    ./yaze -l 0 -b ./diskboot.rom -s start

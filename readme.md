@@ -3,22 +3,23 @@ Hey this repos is re-experiment for great work of https://github.com/cobwebkanam
 reproducible procedure
 1. get https://github.com/begoon/yaze
    git clone https://github.com/begoon/yaze
-2. change Makefile
+2. edit Makefile
 '''
-   [cobweb@yaze]$diff Makefile.org Makefile
-   27c27,28
-   < OPTIONS             = -DBIOS -D_BSD_SOURCE
+   [cobweb@yaze]$diff Makefile Makefile.org
+   27,28c27
+   < #OPTIONS            = -DBIOS -D_BSD_SOURCE
+   < OPTIONS             = -D_BSD_SOURCE -DMEMSIZE=128 -DMMU
    ---
-   > #OPTIONS            = -DBIOS -D_BSD_SOURCE
-   > OPTIONS             = -D_BSD_SOURCE -DMEMSIZE=128 -DMMU
-   30c31
-   < YAZE_OBJS     = yaze.o simz80.o bios.o monitor.o
+   > OPTIONS             = -DBIOS -D_BSD_SOURCE
+   31c30
+   < #YAZE_OBJS     = yaze.o simz80.o bios.o monitor.o
    ---
-   > #YAZE_OBJS     = yaze.o simz80.o bios.o monitor.o
-   32c33
-   < #YAZE_OBJS    = yaze.o simz80.o io.o
+   > YAZE_OBJS     = yaze.o simz80.o bios.o monitor.o
+   33c32
+   < YAZE_OBJS    = yaze.o simz80.o io.o
    ---
-   > YAZE_OBJS    = yaze.o simz80.o io.o
+   > #YAZE_OBJS    = yaze.o simz80.o io.o
+   [cobweb@yaze]$
 '''
 4. make
 5. https://www.moria.de/~michael/cpmtools/

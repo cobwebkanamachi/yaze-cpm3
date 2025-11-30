@@ -1,4 +1,4 @@
-Hey this repos is re-experiment for great work of https://github.com/cobwebkanamachi/yaze-cpm3 .
+Hey this repos is re-experiment for great work of https://www.moria.de/~michael/yaze-cpm3/
 
 reproducible procedure<BR>
 1. get https://github.com/begoon/yaze<BR>
